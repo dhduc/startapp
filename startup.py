@@ -41,7 +41,15 @@ class Startup :
 
 	def init(self) :
 		tasks = [
-			['Kingliving Info', '~/Desktop/deep.md', 'subl', '&']
+			# Program
+			['Skype', '', 'skype', '&'],
+			['PHP Storm', '', 'phpstorm', '&'],
+			['Folder', '.', 'nautilus', ''],
+			# Browser
+			['HR Site', 'http://hr.smartosc.com/login.php', 'google-chrome', ''],
+			['Skype Web', 'https://web.skype.com/en/', 'google-chrome', ''],
+			['Facebook', 'https://www.facebook.com/', 'google-chrome', ''],
+			['Gmail', 'https://mail.google.com/mail/', 'google-chrome', '']
 		]
 		self.tasks = tasks
 	
