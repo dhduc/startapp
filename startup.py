@@ -43,8 +43,9 @@ class Startup :
 		tasks = [
 			# Program
 			['Skype', '', 'skype', '&'],
-			['PHP Storm', '', 'phpstorm', '&'],
-			['Folder', '.', 'nautilus', ''],
+            ['Sublime Text', '', 'subl', ''],
+			['Gedit', '', 'gedit', '&'],
+			['Folder', '', 'nautilus', ''],
 			# Browser
 			['HR Site', 'http://hr.smartosc.com/login.php', 'google-chrome', ''],
 			['Skype Web', 'https://web.skype.com/en/', 'google-chrome', ''],
