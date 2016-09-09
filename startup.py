@@ -37,7 +37,9 @@ class Main :
 
 class Startup :
 
-	tasks = [];
+	tasks = []
+    process = []
+
 
 	def init(self) :
 		tasks = [
@@ -52,7 +54,16 @@ class Startup :
 			['Facebook', 'https://www.facebook.com/', 'google-chrome', ''],
 			['Gmail', 'https://mail.google.com/mail/', 'google-chrome', '']
 		]
+
+        process = [
+            [
+                'sudo service php7.0-fpm restart',
+                'sudo service nginx restart'
+            ]
+        ]
+
 		self.tasks = tasks
+        self.process = process
 	
 	def title(self) :
 		print UI.GREEN + 'Startup Helper ' + UI.BLUE +  '@author ducdh' + '' + UI.ENDC
@@ -60,13 +71,20 @@ class Startup :
 	def run(self) :
 		self.init()
 		self.title()		
-		self.runTasks()		
+        self.runTasks()     
+		self.runProcess()		
 
 	def runTasks(self) :
 		tasks = self.tasks
 		for name, path, program, option in tasks :
 			print UI.GREEN + 'Open ' + name + UI.ENDC
 			command = program + ' ' + path
-			subprocess.call(command, shell=True)									
+			subprocess.call(command, shell=True)		
+
+    def runProcess(self) :
+        process = self.process
+        for section in process :
+            for command in section :
+                subprocess.call(command, shell=True)    
 
 main = Main()	
