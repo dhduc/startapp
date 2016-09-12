@@ -78,7 +78,7 @@ class Startup :
 		tasks = self.tasks
 		for name, path, program, option in tasks :
 			print UI.GREEN + 'Open ' + name + UI.ENDC
-			command = program + ' ' + path
+			command = program + ' ' + path + '' + option
 			subprocess.call(command, shell=True)		
 
     def runProcess(self) :
