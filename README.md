@@ -1,4 +1,4 @@
-##Startup Helper
+##Startapp Helper
 
 ###Description
 - Open file & program necessary when start up system via terminal
